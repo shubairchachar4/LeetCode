@@ -13,7 +13,7 @@ class MyStack {
 
     // Push element x onto stack
     public void push(int x) {
-        // Step 1: push x into q2
+        // Step 1: push into helper queue
         q2.offer(x);
 
         // Step 2: move all elements from q1 to q2
@@ -21,7 +21,7 @@ class MyStack {
             q2.offer(q1.poll());
         }
 
-        // Step 3: swap q1 and q2
+        // Step 3: swap queues
         Queue<Integer> temp = q1;
         q1 = q2;
         q2 = temp;
